@@ -1,0 +1,102 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+ol,
+ul,
+li{
+	list-style: none;
+}
+/*body,html{
+/*	overflow-x: hidden;
+
+}*/
+html,body{
+	width: 100%;
+	height: 100%;
+	background: #001f6e;
+	position: relative;
+}
+.odd {
+	background: url(../img/ZSJ054.png) no-repeat center center;
+}
+.even {
+	background: url(../img/bg1.png) no-repeat center center;
+}
+
+.container{
+	position: absolute;
+	width: 1920px;
+	height: 1080px;
+	overflow:hidden;
+	background: url(../img/ZSJ054.png) no-repeat center center;
+	left: 0;
+	top: 0;
+}
+.cont{
+	width: 86%;
+	height:80%;
+	margin: 5% auto;
+	position: relative;
+}
+.cont>h1{
+	font-size: 52px;
+	color: #fff;
+	font-weight: 100;
+}
+/*--会议主题--*/
+.miam_title{
+	width: 100%;
+	height:auto;
+	text-align: center;
+	margin-top: 12%;
+	position: absolute;
+	left: 0;
+	top: 12%;
+}
+.miam_title>a{
+	display: inline-block;
+	font-size: 120px;
+}
+/*--会议副标题--*/
+.subhead{
+	width: 100%;
+	height: auto;
+	text-align: center;
+	margin-top: 4.5%;
+}
+.subhead>a{
+	display: inline-block;
+	font-size: 50px;
+}
+/*--meet-place--*/
+.mroom{
+	width: 100%;
+	height: 44px;
+	text-align: center;
+	font-size: 44px;
+	color: #fff;
+	margin-top: 4%;
+	position: absolute;
+	left: 0;
+	top: 75%;
+	font-weight: 100;
+}
+/*--meet-time--*/
+.mtime{
+	width: 100%;
+	height: 48px;
+	font-size: 48px;
+	color: #fff;
+	margin-top: 2.4%;
+	text-align: center;
+	font-weight: 100;
+	position: absolute;
+	left: 0;
+	top: 86%;
+}
+

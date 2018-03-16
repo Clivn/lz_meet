@@ -1,0 +1,53 @@
+[
+	{
+		"id": "dgfg",
+		"topic": "此次召开的会议主题1此次召开的会议主题1",
+		"room": "会议室1",
+		"startTime": "2018-01-31 18:00",
+		"endTime": "2018-01-31 21:00",
+		"signs": [
+			{
+				"name": "安迪4",
+				"status": 1
+			}, {
+				"name": "安迪",
+				"status": 1
+			}, {
+				"name": "安迪",
+				"status": 1
+			}, {
+				"name": "安迪",
+				"status": 1
+			}, {
+				"name": "安迪",
+				"status": 1
+			}, {
+				"name": "安迪",
+				"status": 1
+			}, {
+				"name": "安迪",
+				"status": 1
+			}
+			, {
+				"name": "安迪",
+				"status": 1
+			}
+			, {
+				"name": "安迪",
+				"status": 1
+			}
+			, {
+				"name": "安迪",
+				"status": 1
+			}
+			, {
+				"name": "安迪",
+				"status": 1
+			}
+			, {
+				"name": "安迪",
+				"status": 1
+			}
+		]
+	}
+]

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" chrom="1" />
+		<title>兰州科技大市场会议通知系统</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="cont">
+				<h1>兰州科技大市场会议通知系统</h1>
+				<!--会议主题-->
+				<p class='miam_title'>
+					<a href="#">此次召开的大会主题名称</a>
+				</p>
+				<!--会议室名称-->
+				<p class="mroom">
+					会议室名称
+				</p>
+				<!--会议时间-->
+				<p class="mtime">
+					<span>2017年5月10日~12日</span>~
+					<span>8:00~16:00</span>
+				</p>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function() {
+			$.ajax({
+				type: "get",
+				url: "js/data.json",
+				success: function(data) {
+					console.log(data);
+					if(data !== null) {
+						setTimeout(function() {
+							$(".container").animate({
+									"left": "-2000px"
+								},1000);
+						}, 8000)
+						var Con = data;
+						var timer = null;
+						timer = setInterval(random, 10000);
+						
+
+						function random() {
+							//clearInterval(timer);
+							var num = parseInt(Math.random() * (Con.length - 1));
+							if(num % 2 == 1) {
+								$('.container').removeClass().addClass('container').addClass('add');
+							} else {
+								$('.container').removeClass().addClass('container').addClass('even');
+							}
+							//console.log(Con[num]);
+							$(".miam_title a").html(Con[num].topic);
+							$(".mroom").html(Con[num].room);
+							$(".mtime").find('span').first().html(Con[num].startTime);
+							$(".mtime").find('span').last().html(Con[num].endTime);
+							$(".container").animate({
+									"left": "0"
+								},0);
+							/*$(".miam_title").animate({
+								"left": "0"
+							}).fadeIn();
+							$(".mroom").animate({
+								"left": "0"
+							}).fadeIn();
+							$(".mtime").animate({
+								"left": "0"
+							}).fadeIn();*/
+
+							var t1 = null;
+							t1 = setTimeout(function() {
+								clearTimeout(t1);
+								$(".container").animate({
+									"left": "-2000px"
+								},1000);
+								/*$(".miam_title").animate({
+									"left": "-2000px"
+								}, 1000).fadeOut(1000);
+								$(".mroom").animate({
+									"left": "-2000px"
+								}, 1000).fadeOut(1000);
+								$(".mtime").animate({
+									"left": "-2000px"
+								}, 1000).fadeOut(1000);*/
+							}, 8000)
+
+						}
+					}
+
+				}
+
+			});
+
+			setTimeout(function() {
+				window.location.href = 'index.html';
+			}, 1800000)
+		});
+	</script>
+
+</html>
